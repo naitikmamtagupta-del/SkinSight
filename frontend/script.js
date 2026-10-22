@@ -1,5 +1,5 @@
 
-const API_URL = "http://127.0.0.1:8000/predict";
+const API_URL = "https://skinsight-4tzf.onrender.com/predict";
 
 const form = document.getElementById("upload-form");
 const imageInput = document.getElementById("image-input");
