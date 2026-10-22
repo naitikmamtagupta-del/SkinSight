@@ -1,0 +1,94 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f5f8f7">
+  <title>SkinSight | Skin Lesion Analysis</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="navbar">
+    <a class="brand" href="#">
+      <span class="brand-icon">✳</span>
+      SkinSight
+    </a>
+    <span class="nav-label">AI RESEARCH PROTOTYPE</span>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <span class="eyebrow">SKIN IMAGE CLASSIFICATION</span>
+      <h1>A closer look at<br><span>skin health.</span></h1>
+      <p class="intro">
+        Upload a skin lesion image to explore an AI-generated
+        classification using our machine learning model.
+      </p>
+    </section>
+
+    <section class="analyzer">
+      <div class="section-heading">
+        <div>
+          <h2>Image analysis</h2>
+          <p>Choose a JPG, PNG or WEBP image.</p>
+        </div>
+        <span class="status"><span></span> Model API</span>
+      </div>
+
+      <form id="upload-form">
+        <label class="upload-box" for="image-input" id="upload-box">
+          <img id="preview" alt="Selected skin image preview" hidden>
+          <span class="upload-icon" id="upload-icon">↑</span>
+          <strong id="upload-title">Upload your image</strong>
+          <span id="upload-subtitle">Click to browse your device</span>
+          <span class="file-types">JPG · PNG · WEBP · MAX 10 MB</span>
+        </label>
+
+        <input
+          type="file"
+          id="image-input"
+          accept="image/jpeg,image/png,image/webp"
+          hidden
+        >
+
+        <button type="submit" id="analyze-button" disabled>
+          Analyze image <span>→</span>
+        </button>
+      </form>
+
+      <p id="message" class="message" role="status" aria-live="polite"></p>
+
+      <section id="result" class="result" hidden>
+        <div class="result-heading">
+          <span class="eyebrow">MODEL OUTPUT</span>
+          <span class="result-check">✓ Analysis complete</span>
+        </div>
+        <p class="result-label">AI's suggested category</p>
+<h2 id="predicted-class">—</h2>
+<p id="class-description" class="class-description"></p>
+<p class="result-score">
+          Model score: <strong id="probability">—</strong>
+        </p>
+
+        <h3>Class-wise scores</h3>
+        <div id="probability-list" class="probability-list"></div>
+        <p id="disclaimer" class="disclaimer"></p>
+      </section>
+    </section>
+
+    <aside class="notice">
+      <strong>Important health notice</strong>
+      <p>
+        SkinSight is an educational research prototype, not a medical
+        diagnostic tool. Its predictions are not clinically validated
+        and must not be used to make healthcare decisions. Consult a
+        qualified dermatologist about skin concerns.
+      </p>
+    </aside>
+  </main>
+
+  <footer>SkinSight · Machine learning project</footer>
+</body>
+</html>
